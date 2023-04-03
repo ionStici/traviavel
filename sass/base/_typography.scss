@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #777;
+    line-height: 1.5;
+}
+
+.heading-1 {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    line-height: 1.2;
+
+    &--animated {
+        animation: moveInLeft 1s ease-in-out 0.2s;
+        animation-fill-mode: backwards;
+    }
+
+    backface-visibility: hidden;
+
+    @include width(520) {
+        font-size: 5rem;
+    }
+
+    @include width(420) {
+        font-size: 3.5rem;
+    }
+}
+
+.header__text {
+    color: $color-white;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    line-height: 1.2;
+
+    &--animated {
+        animation: moveInRight 1s ease-in-out 0.2s;
+        animation-fill-mode: backwards;
+    }
+
+    backface-visibility: hidden;
+
+    @include width(520) {
+        font-size: 2.3rem;
+    }
+
+    @include width(420) {
+        font-size: 1.6rem;
+    }
+}
+
+.heading-2 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: all 0.2s;
+    cursor: default;
+
+    // Background as text color
+    background-image: linear-gradient(to right, $color-1-light, $color-1-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.05);
+        transform: scale(1.02);
+    }
+}
+
+.heading-3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

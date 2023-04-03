@@ -1,0 +1,135 @@
+.composition {
+    position: relative;
+    margin: 0 auto;
+
+    &__photo-box {
+        width: 30rem;
+        height: 20rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+        border-radius: 3px;
+        overflow: hidden;
+
+        position: absolute;
+
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+            z-index: 5;
+        }
+
+        &:hover &__photo-box:not(:hover) {
+            transform: scale(0.9);
+        }
+
+        @include width(520) {
+            width: 27rem;
+            height: 17rem;
+        }
+
+        &--1 {
+            left: 0;
+            top: -2rem;
+            z-index: 1;
+
+            @include width(750) {
+                top: -0rem;
+                left: -1rem;
+            }
+
+            @include width(520) {
+                top: 3rem;
+                left: 0;
+            }
+        }
+
+        &--2 {
+            right: 0;
+            top: 2rem;
+            z-index: 2;
+
+            @include width(1050) {
+                top: 4rem;
+                right: -5rem;
+            }
+
+            @include width(900) {
+                top: 7rem;
+                right: -7rem;
+            }
+
+            @include width(750) {
+                right: -4rem;
+                top: 9rem;
+            }
+
+            @include width(520) {
+                top: 0rem;
+                right: 30%;
+                z-index: 4;
+            }
+
+            @include width(420) {
+                top: -1rem;
+                right: 25%;
+            }
+        }
+
+        &--3 {
+            left: 20%;
+            top: 10rem;
+            z-index: 3;
+
+            @include width(1050) {
+                top: 12rem;
+                left: 15%;
+            }
+
+            @include width(900) {
+                top: 13rem;
+            }
+
+            @include width(750) {
+                left: 12%;
+                top: 15rem;
+            }
+
+            @include width(520) {
+                top: 5rem;
+                right: 0;
+                left: revert;
+            }
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        background-position: center;
+
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        &--p1 {
+            background-image: url(../img/com-2.jpg);
+        }
+
+        &--p2 {
+            background-image: url(../img/com-3.jpg);
+        }
+
+        &--p3 {
+            background-image: url(../img/com-1.jpg);
+        }
+    }
+
+    &:hover &__photo-box:not(:hover) {
+        transform: scale(0.9);
+    }
+}

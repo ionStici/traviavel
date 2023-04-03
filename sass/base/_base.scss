@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include width(1800) {
+        font-size: 12px; // 75%
+    }
+
+    // // // // // // // // // // // // // // // // // // // // //
+
+    @include width(1200) {
+        font-size: 9px; // 56.25%
+    }
+
+    @include width(1050) {
+        font-size: 8.5px; // 53%
+    }
+
+    @include width(900) {
+        font-size: 8px; // 50%
+    }
+
+    @include width(825) {
+        font-size: 7.7px; // 48%
+    }
+
+    @include width(750) {
+        font-size: 7px; // 44%
+    }
+
+    @include width(600) {
+        font-size: 6px; // 37.5%
+    }
+
+    @include width(520) {
+        //
+    }
+
+    @include width(420) {
+        font-size: 5.6px; // 35%
+    }
+
+    @include width(320) {
+        font-size: 5.3px;
+    }
+}
+
+body {
+    padding: 3rem;
+
+    @include width(900) {
+        padding: 0;
+    }
+
+    background-color: #f7f7f7;
+}
+
+.main {
+    background-color: #f7f7f7;
+    padding-top: 25rem;
+    margin-top: -24rem;
+}
+
+// ::selection {}

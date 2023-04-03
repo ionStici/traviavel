@@ -1,0 +1,325 @@
+.section-about {
+    width: $grid-width;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+
+    @include width(1250) {
+        width: 110rem;
+    }
+
+    @include width(1200) {
+        width: 105rem;
+        // padding: 0 5rem 3rem 5rem;
+    }
+
+    @include width(1050) {
+        width: 90rem;
+
+        .heading-3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include width(825) {
+        width: 80rem;
+
+        .heading-3 {
+            font-size: 1.4rem;
+        }
+    }
+
+    @include width(520) {
+        width: 90%;
+
+        .heading-3 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.about {
+    &__heading-box {
+        margin: 7rem 0 8rem 0;
+
+        @include width(1050) {
+            .heading-2 {
+                font-size: 3.2rem;
+            }
+        }
+
+        @include width(825) {
+            .heading-2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @include width(600) {
+            .heading-2 {
+                font-size: 2.7rem;
+            }
+        }
+
+        @include width(520) {
+            margin: 4rem 0 5rem 0;
+
+            .heading-2 {
+                font-size: 3.4rem;
+            }
+        }
+    }
+
+    &__content-box {
+        display: flex;
+
+        @include width(520) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__box-left {
+        width: 47.5%;
+        margin-right: 5%;
+
+        @include width(520) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__box-right {
+        width: 47.5%;
+
+        @include width(1200) {
+            transform: translateY(2rem);
+        }
+
+        @include width(1050) {
+            transform: translateY(5rem) translateX(-2rem);
+        }
+
+        @include width(520) {
+            display: block;
+            width: 90%;
+            height: 25rem;
+            margin: 0 auto;
+            transform: translate(0, 5rem);
+        }
+    }
+}
+
+//
+
+.section-features {
+    margin: 10rem 0;
+    padding: 15rem 0;
+    transform: skewY(-6deg);
+
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-1-light, 0.7),
+            rgba($color-1-dark, 0.7)
+        ),
+        url(../img/features-background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 6rem;
+
+        width: $grid-width;
+        margin: 0 auto;
+
+        transform: skewY(6deg);
+
+        @include width(1250) {
+            width: 110rem;
+        }
+
+        @include width(1200) {
+            width: 105rem;
+            column-gap: 4rem;
+        }
+
+        @include width(1050) {
+            column-gap: 2rem;
+            width: 90rem;
+        }
+
+        @include width(750) {
+            column-gap: 1rem;
+            width: 80rem;
+        }
+
+        @include width(520) {
+            display: flex;
+            flex-direction: column;
+            column-gap: revert;
+            gap: 5rem;
+            width: 43rem;
+        }
+    }
+}
+
+//
+
+.section-tours {
+    padding: 2rem 0 15rem 0;
+
+    &__heading-box {
+        text-align: center;
+    }
+
+    &__container {
+        width: $grid-width;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 6rem;
+
+        @include width(1250) {
+            width: 110rem;
+        }
+
+        @include width(1200) {
+            column-gap: 5rem;
+            width: 108rem;
+        }
+
+        @include width(1050) {
+            column-gap: 3rem;
+            width: 100rem;
+        }
+
+        @include width(900) {
+            column-gap: 2rem;
+            width: 95rem;
+        }
+
+        @include width(750) {
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            column-gap: revert;
+            gap: 8.5rem;
+        }
+    }
+}
+
+//
+
+.section-stories {
+    padding: 15rem 0;
+    position: relative;
+
+    @include width(750) {
+        .heading-2 {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+//
+
+.section-book {
+    // prettier-ignore
+    background-image: linear-gradient(to right bottom, $color-1-light, $color-1-dark);
+    padding: 15rem 0;
+
+    &__grid {
+        width: $grid-width;
+        margin: 0 auto;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+        background-image: linear-gradient(
+                105deg,
+                rgba($color-white, 0.9) 0%,
+                rgba($color-white, 0.9) 50%,
+                transparent 50%
+            ),
+            url(../img/book-background.jpg);
+        background-size: cover;
+        background-position: right;
+
+        height: 50rem;
+
+        @include width(1250) {
+            width: 110rem;
+        }
+
+        @include width(1200) {
+            width: 107rem;
+        }
+
+        @include width(1050) {
+            width: 90rem;
+        }
+
+        @include width(750) {
+            width: 80rem;
+
+            // prettier-ignore
+            background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 57%, 
+            transparent 43%), url(../img/book-background.jpg);
+        }
+
+        @include width(520) {
+            width: 65rem;
+
+            // prettier-ignore
+            background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 70%, 
+            transparent 30%), url(../img/book-background.jpg);
+        }
+
+        @include width(420) {
+            width: 50rem;
+
+            // prettier-ignore
+            background-image: linear-gradient(105deg, rgba($color-white, 0.85) 0%, rgba($color-white, 0.85) 100%, 
+            transparent 0%), url(../img/book-background.jpg);
+        }
+    }
+
+    &__content {
+        width: 50%;
+        height: 100%;
+        padding: 6rem;
+
+        @include width(1250) {
+            width: 52%;
+        }
+
+        @include width(1200) {
+            width: 54%;
+        }
+
+        @include width(1050) {
+            width: 60%;
+
+            .heading-2 {
+                font-size: 3rem;
+            }
+        }
+
+        @include width(750) {
+            width: 70%;
+        }
+
+        @include width(520) {
+            width: 85%;
+        }
+
+        @include width(420) {
+            width: 100%;
+            padding: 6rem 4rem;
+
+            .heading-2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}

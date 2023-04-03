@@ -1,0 +1,105 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+
+        display: inline-block;
+        width: fit-content;
+        margin: 0 auto;
+        border: none;
+        border-radius: 10rem;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem 4rem;
+
+        position: relative;
+
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 -0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: #777;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-1;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-1;
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.95s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: $color-1;
+        padding: 0.3rem 1rem;
+        border-bottom: 1px solid $color-1;
+
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        border-radius: 3px;
+        background-color: $color-1;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        border-radius: 3px;
+        box-shadow: 0 0.5rem 2rem rgba($color-black, 0.15);
+        transform: translateY(0);
+    }
+}
